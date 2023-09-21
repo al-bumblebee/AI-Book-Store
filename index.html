@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Some title</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .nav{
+
+        .nav {
             display: block;
+            width: 100%;
+            height: 79px;
+        }
+
+        .catalouge {
+            width: 9%;
+            border: 1px solid black;
+
+        }
+
+        .description {
+            border: 1px solid black;
+            background-color: aqua;
+
         }
     </style>
 </head>
+
 <body>
     <iframe src="/nav.html" class="nav" frameborder="0"></iframe>
-    <iframe src="/catalouge.html" frameborder="0"></iframe>
-    <iframe src="/description.html" frameborder="0"> <h1>Description</h1></iframe>
+    <iframe src="/catalouge.html" class="catalouge" frameborder="0"></iframe>
+    <iframe src="/description.html" class="description" frameborder="0"></iframe>
 </body>
+
 </html>

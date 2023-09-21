@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header{
+            display: flex; 
+        }
         span {
-            border: 2px solid black;
-            margin: 2px;
+            border: 1px solid black;
+            background-color: aqua;
+            width: 100%;
         }
         .logo {
-            /* float: left; */
-            width: 40%;
+            padding: 10px;
+            width: 8%;
         }
 
         .name {
-            /* float: left; */
-            width: 60%;
+            padding :10px;
+            width: 92%;
         }   
+        .navigation {
+            display: flex;
+
+        }
+        .home{
+            width: 37%;
+        }
+        .navigation span{
+            padding :10px;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +44,7 @@
         <span class="logo">logo</span>
         <span class="name">Website name</span>
         </div>
-        <div>
+    <div class="navigation">
             <span class="home">Home</span><span class="login">Login</span><span class="Registration">Registration</span><span>Catalogue</span><span>Cart</span>
         </div>
 </body>
