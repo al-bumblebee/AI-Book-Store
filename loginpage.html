@@ -1,12 +1,33 @@
 <html>
+  <style>
+    *{
+            margin: 5px;
+            padding: 5px;
+    }
+    .log-form{
+      display: flex;
+      justify-content: center;
+      align-content: flex-end;
+      flex-direction: column;
+      align-items: center;
+    }
+    .log-form{
+      height: 90%;
+    }
+    .button{
+      display: flex;
+      justify-content: center;
+    }
+   
+  </style>
     
 <body><div class="log-form">
-  <h2>Login to your account</h2>
+  <div class="heading"><h2>Login to your account</h2></div>
   <form>
-    <input type="text" title="username" placeholder="username" />
-    <input type="password" title="username" placeholder="password" />
-    <button type="submit" class="btn">Login</button>
-    <a class="forgot" href="#">Forgot Username?</a>
+    <div class="username"><input type="text" title="username" placeholder="username" /></div>
+    <div class="password"><input type="password" title="username" placeholder="password" /></div>
+    <div class="button"><button type="submit" class="btn">Login</button> </div>
+    <div class="Register">New User? <a class="forgot" href="/registration.html">Register Here.</a> </div>
   </form>
 </div>
 </body>
