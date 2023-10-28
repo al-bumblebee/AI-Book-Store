@@ -1,0 +1,106 @@
+<!-- FILEPATH: /f:/OneDrive - MSFT/3rd SEMESTER/Web Designing Workshop/AI-Book-Store/cartpage.html -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Cart</title>
+        <style>
+            /* CSS styles */
+            header {
+                padding: 10px;
+                text-align: center;
+            }
+            .container {
+                margin: 20px auto;
+                max-width: 80%;
+                padding: 0 20px;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            .total {
+                font-weight: bold;
+                text-align: right;
+            }
+            .checkout {
+                float: right;
+                background-color: #fde9d9;
+                border: none;
+                color: #000000;
+                cursor: pointer;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            .checkout:hover {
+                background-color: #fabf8f;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Your Cart</h1>
+        </header>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Great Gatsby</td>
+                        <td>F. Scott Fitzgerald</td>
+                        <td>1</td>
+                        <td>$10.99</td>
+                    </tr>
+                    <tr>
+                        <td>To Kill a Mockingbird</td>
+                        <td>Harper Lee</td>
+                        <td>2</td>
+                        <td>$12.99</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td>George Orwell</td>
+                        <td>1</td>
+                        <td>$8.99</td>
+                    </tr>
+                    <tr>
+                        <td>The Catcher in the Rye</td>
+                        <td>J.D. Salinger</td>
+                        <td>1</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <td>The Hobbit</td>
+                        <td>J.R.R. Tolkien</td>
+                        <td>1</td>
+                        <td>$11.99</td>
+                    </tr>
+                    <tr>
+                        <td class="total" colspan="3">Total:</td>
+                        <td class="total">$54.95</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="checkout">Checkout</button>
+        </div>
+    </body>
+</html>

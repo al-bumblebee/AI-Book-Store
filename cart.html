@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Al Book Store</title>
+    <style>
+        :root {
+            --height:12.25vh;
+            --width: 9.3vw;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #container{
+            display:grid;
+            grid-template-rows: 1fr 10fr;
+        }
+        .nav{
+            display: block;
+            width: 100%;
+            height: var(--height);
+        }
+        .catalouge {
+            width: var(--width);
+            height: 100vh; 
+            border: 1px solid black;
+
+        }
+
+        .description {
+            border: 1px solid black;
+            width: calc(100vw - var(--width));
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+
+        }
+        #flex{
+            display: flex;
+            height: calc(100vh - var(--height));
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+    <iframe src="./nav.html" class="nav" frameborder="0"></iframe>
+    <div id="flex">
+    <iframe src="./catalouge.html" class="catalouge" frameborder="0"></iframe>
+    <iframe src="./cartpage.html" class="description" frameborder="0"></iframe>
+</div>
+</div>
+</body>
+
+</html>
