@@ -23,11 +23,11 @@
     
 <body><div class="log-form">
   <div class="heading"><h2>Register Here......</h2></div>
-  <form>
+  <form action="/registration_info.php" method="POST" onsubmit="return validateForm()">
     <div align="center" class="name"> <label for="fname">Name: </label> <input type="text" id="name" name="name"></div>
     <div align="center" class="email"> <label for="email">E-mail ID: </label> <input type="text" id="email" name="email"></div>
     <div align="center" class="passw"> <label for="passw">Password : </label> <input type="password" id="passw" name="passw"></div>
-    <div align="center" class="phoneno"> <label for="phoneno">Phone Number: </label> <input type="tel" id="phoneno" name="phoneno" minlength="9" maxlength="14"></div>
+    <div align="center" class="phoneno"> <label for="phoneno">Phone Number: </label> <input type="tel" id="phoneno" name="phoneno" minlength="10" maxlength="10"></div>
     <div align="center"><label>Select your gender :<br></label>
     <input type="radio" id="male" name="male" value="male">
     <label for="male">Male</label>
@@ -54,4 +54,35 @@
   </form>
 </div>
 </body>
+<script>
+  function validateForm() {
+      var name = document.getElementById("name").value;
+      var password = document.getElementById("passw").value;
+      var email=document.getElementById("email").value;
+      var phoneno=document.getElementById("phoneno").value;
+      var namePattern = /^.{6,}[A-Za-z\s]+$/;
+      var passwordPattern = /^.{6,}[A-Za-z]$/;
+      var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+      var regPhoneno=/^\d{10}$/;
+
+      if (!name.match(namePattern)) {
+          alert("Please enter a valid name (letters and spaces only) and length should be greater than 6 character.");
+          return false;
+      }
+      if(!email.match(regEmail)){
+        alert("Please enter a valid email address.");
+        return false;
+        
+      }
+      if (!password.match(passwordPattern)) {
+          alert("Password must be at least 6 characters long.");
+          return false;
+      }
+      if(!phoneno.match(regPhoneno)){
+        alert("Please enter a valid phone number.");
+        return false;
+      }
+      return true;
+  }
+</script>
 </html>
